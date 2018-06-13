@@ -13,7 +13,7 @@ class Birthdayparty:
 
 		#Your code will go here
 		author = ctx.message.author
-		await self.bot.say("I can do stuff!" + author.display_name)
+		await self.bot.say("I can do stuff! {}".format(author.display_name))
 	
 	@commands.group(name="party", pass_context=True)
 	async def _party(self):
