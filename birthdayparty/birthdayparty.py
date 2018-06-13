@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class BirthdayParty
+class Birthdayparty
 	"""A custom birthday party widget.
 	Celebrate with the whole server!
 	"""
@@ -53,4 +53,4 @@ class BirthdayParty
 				await self.bot.say("Operation failed, account not created.")
 	
 def setup(bot):
-    bot.add_cog(BirthdayParty(bot))
+    bot.add_cog(Birthdayparty(bot))
