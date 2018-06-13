@@ -1,7 +1,5 @@
 import discord
 from discord.ext import commands
-import re
-import json
 
 class Birthdayparty:
 	"""A custom birthday party widget. Celebrate with the whole server!"""
@@ -14,7 +12,8 @@ class Birthdayparty:
 		"""This does stuff!"""
 
 		#Your code will go here
-		await self.bot.say("I can do stuff!" + author.name)
+		user_name = author.display_name
+		await self.bot.say("I can do stuff!" + user_name)
 	
 	@commands.group(name="party", pass_context=True)
 	async def _party(self):
