@@ -12,7 +12,7 @@ class Birthdayparty:
 		"""This does stuff!"""
 
 		#Your code will go here
-		author = ctx.message.author
+		#author = ctx.message.author
 		await self.bot.say("I can do stuff!" + author)
 	
 	@commands.group(name="party", pass_context=True)
