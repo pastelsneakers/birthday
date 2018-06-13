@@ -15,7 +15,7 @@ class Birthdayparty:
 		await self.bot.say("I can do stuff!")
 	
 	@commands.group(name="party", pass_context=True)
-	async def _party(self)
+	async def _party(self):
 		"""Everyone deserves to have their birthday celebrated.
 		Register your birthday so that everyone else has to celebrate with you!
 		
@@ -27,7 +27,7 @@ class Birthdayparty:
 		await self.bot.say("Debug")
 
 	@_party.command(pass_context=True)
-	async def register(self, user, *, bday_input : str)
+	async def register(self, user, *, bday_input : str):
 		"""Registration, yeah!
 		
 		Command: !party register <birthday>
