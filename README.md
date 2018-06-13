@@ -1,2 +1,5 @@
-# birthday
-Personal cog for Discord bot, I don't know Python so this is going to be messy. Please leave me alone.
+# Pastel's Cogs
+I don't know a lot about Python or Discord's API, but I'm trying. These are cogs for Twentysix26's Discord bot, Red.
+
+## Birthday
+A personal WIP cog for my personal server.
