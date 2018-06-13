@@ -72,12 +72,12 @@ class Birthday:
 		self.settings = dataIO.load_json(self.file_path)
 	
 	@commands.group(name="bank", pass_context=True)
-    async def _birthdays(self, ctx):
+    async def birthdayp(self, ctx):
         """Birthday operations"""
         if ctx.invoked_subcommand is None:
             await send_cmd_help(ctx)
 	
-	@_birthdays.command(pass_context=True)
+	@birthdayp.command(pass_context=True)
 	async def register(self, ctx, user, *, bday : str)
 		birfday = bday
 		settings = self.settings[ctx.message.server.id]
