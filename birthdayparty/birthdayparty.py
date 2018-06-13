@@ -45,7 +45,7 @@ class Birthdayparty:
 			openFile = open("data/birthday/birthdays.json", "a+")
 			openFile.write(user.name)
 			findUser = openFile.find(account)
-			if account is in openFile:
+			if account in openFile:
 				await self.bot.say("Operation success, account created.")
 			else:
 				await self.bot.say("Operation failed, account not created.")
