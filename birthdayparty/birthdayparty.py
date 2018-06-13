@@ -8,46 +8,8 @@ class Birthdayparty:
 		self.bot = bot
 	
 	@commands.command()
-	async def mycom(self, member):
-		"""This does stuff!"""
+	async def mycom(self):
+		await self.bot.say("I can do stuff!")
 
-		#Your code will go here
-		#author = ctx.message.author
-		await self.bot.say("I can do stuff! {}".format(member.name))
-	
-	@commands.group(name="party", pass_context=True)
-	async def _party(self):
-		"""Everyone deserves to have their birthday celebrated.
-		Register your birthday so that everyone else has to celebrate with you!
-		
-		Commands:
-			- !party register <birthday> : Registers your birthday
-			- !party showbirthdays : Shows all recorded birthdays
-			- !party shownext : Shows the next birthday
-		"""
-
-	@_party.command(pass_context=True)
-	async def register(self, user : discord.Member):
-	
-		#account = user.mention
-		#bday_setdate = bday_input
-		
-		await self.bot.say(user.name)
-		
-		
-		#openFile = open("data/birthday/birthdays.txt", "w+")
-		#findUser = re.search(r"account", str(openFile))
-		#if account in openFile:
-		#	await self.bot.say("User found.")
-		#else:
-		#	await self.bot.say("User not found, creating record now.")
-		#	openFile = open("data/birthday/birthdays.json", "a+")
-		#	openFile.write(account)
-		#	findUser = re.search(r"account", str(openFile))
-		#	if account in openFile:
-		#		await self.bot.say("Operation success, account created.")
-		#	else:
-		#		await self.bot.say("Operation failed, account not created.")
-	
 def setup(bot):
 	bot.add_cog(Birthdayparty(bot))
