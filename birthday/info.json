@@ -1,0 +1,8 @@
+{
+    "AUTHOR" : "pastelsneakers",
+    "INSTALL_MSG" : "Pls no bully.",
+    "NAME" : "Birthday",
+    "SHORT" : "A Short description, appears on !cog list repo",
+    "DESCRIPTION" : "A personal cog for my personal server.",
+    "HIDDEN" : false
+}
