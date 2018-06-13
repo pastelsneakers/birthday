@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import re
+import json
 
 class Birthdayparty:
 	"""A custom birthday party widget. Celebrate with the whole server!"""
@@ -25,7 +26,6 @@ class Birthdayparty:
 			- !party showbirthdays : Shows all recorded birthdays
 			- !party shownext : Shows the next birthday
 		"""
-		await self.bot.say("Debug")
 
 	@_party.command(pass_context=True)
 	async def register(self, user : discord.Member.nick, *, bday_input : str):
@@ -37,19 +37,22 @@ class Birthdayparty:
 		account = user
 		bday_setdate = bday_input
 		
-		openFile = open("data/birthday/birthdays.txt", "w+")
-		findUser = re.search(r"account", str(openFile))
-		if account in openFile:
-			await self.bot.say("User found.")
-		else:
-			await self.bot.say("User not found, creating record now.")
-			openFile = open("data/birthday/birthdays.json", "a+")
-			openFile.write(account)
-			findUser = re.search(r"account", str(openFile))
-			if account in openFile:
-				await self.bot.say("Operation success, account created.")
-			else:
-				await self.bot.say("Operation failed, account not created.")
+		await self.bot.say(account)
+		
+		
+		#openFile = open("data/birthday/birthdays.txt", "w+")
+		#findUser = re.search(r"account", str(openFile))
+		#if account in openFile:
+		#	await self.bot.say("User found.")
+		#else:
+		#	await self.bot.say("User not found, creating record now.")
+		#	openFile = open("data/birthday/birthdays.json", "a+")
+		#	openFile.write(account)
+		#	findUser = re.search(r"account", str(openFile))
+		#	if account in openFile:
+		#		await self.bot.say("Operation success, account created.")
+		#	else:
+		#		await self.bot.say("Operation failed, account not created.")
 	
 def setup(bot):
 	bot.add_cog(Birthdayparty(bot))
