@@ -30,10 +30,10 @@ class Birthdayparty:
 	@_party.command(pass_context=True)
 	async def register(self, user : discord.Member):
 	
-		account = user.mention
+		#account = user.mention
 		#bday_setdate = bday_input
 		
-		await self.bot.say(account)
+		await self.bot.say(user.name)
 		
 		
 		#openFile = open("data/birthday/birthdays.txt", "w+")
