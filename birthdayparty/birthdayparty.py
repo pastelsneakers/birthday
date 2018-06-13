@@ -14,7 +14,7 @@ class Birthdayparty:
 		"""This does stuff!"""
 
 		#Your code will go here
-		await self.bot.say("I can do stuff!" + user.mention)
+		await self.bot.say("I can do stuff!" + author.name)
 	
 	@commands.group(name="party", pass_context=True)
 	async def _party(self):
