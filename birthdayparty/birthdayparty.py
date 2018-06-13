@@ -34,7 +34,7 @@ class Birthdayparty:
 		Command: !party register <birthday>
 		<birthday> input should be in MM/DD format.
 		"""
-		account = user.name
+		account = {user.name}
 		#bday_setdate = bday_input
 		
 		await self.bot.say(account)
