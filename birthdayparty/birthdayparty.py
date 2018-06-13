@@ -33,7 +33,7 @@ class Birthdayparty:
 		Command: !party register <birthday>
 		<birthday> input should be in MM/DD format.
 		"""
-		account = user.name
+		account = author.display_name
 		bday_setdate = bday_input
 		
 		openFile = open("data/birthday/birthdays.txt", "w+")
@@ -43,7 +43,7 @@ class Birthdayparty:
 		else:
 			await self.bot.say("User not found, creating record now.")
 			openFile = open("data/birthday/birthdays.json", "a+")
-			openFile.write(user.name)
+			openFile.write(account)
 			findUser = openFile.find(account)
 			if account in openFile:
 				await self.bot.say("Operation success, account created.")
