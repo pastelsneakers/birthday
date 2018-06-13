@@ -6,7 +6,7 @@ class Birthdayparty:
 
     def __init__(self, bot):
         self.bot = bot
-
+	
     @commands.command()
     async def mycom(self):
         """This does stuff!"""
