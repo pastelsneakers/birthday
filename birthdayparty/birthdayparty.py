@@ -38,7 +38,7 @@ class Birthdayparty:
 		bday_setdate = bday_input
 		
 		openFile = open("data/birthday/birthdays.txt", "w+")
-		findUser = re.search("str(account)", openFile)
+		findUser = re.search(account, openFile)
 		if account in openFile:
 			await self.bot.say("User found.")
 		else:
