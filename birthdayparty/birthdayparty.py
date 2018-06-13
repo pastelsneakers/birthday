@@ -4,15 +4,15 @@ from discord.ext import commands
 class Birthdayparty:
 	"""A custom birthday party widget. Celebrate with the whole server!"""
 
-    def __init__(self, bot):
-        self.bot = bot
+	def __init__(self, bot):
+		self.bot = bot
 	
-    @commands.command()
-    async def mycom(self):
-        """This does stuff!"""
+	@commands.command()
+	async def mycom(self):
+		"""This does stuff!"""
 
-        #Your code will go here
-        await self.bot.say("I can do stuff!")
+		#Your code will go here
+		await self.bot.say("I can do stuff!")
 	
 	#@commands.group(name="party", pass_context=True)
 	#async def _party(self)
@@ -51,4 +51,4 @@ class Birthdayparty:
 #				await self.bot.say("Operation failed, account not created.")
 #	
 def setup(bot):
-    bot.add_cog(Birthdayparty(bot))
+	bot.add_cog(Birthdayparty(bot))
