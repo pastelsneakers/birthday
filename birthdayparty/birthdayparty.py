@@ -45,7 +45,7 @@ class Birthdayparty:
 			await self.bot.say("User not found, creating record now.")
 			openFile = open("data/birthday/birthdays.json", "a+")
 			openFile.write(account)
-			findUser = openFile.findall(account)
+			findUser = re.search(r"account", str(openFile))
 			if account in openFile:
 				await self.bot.say("Operation success, account created.")
 			else:
