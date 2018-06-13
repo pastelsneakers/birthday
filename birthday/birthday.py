@@ -12,7 +12,7 @@ class Birthday:
 					 "Don't forget to smile!", "Today is your day! Make it good!"]
 	
 	@commands.command()
-	async def wish(self):
+	async def test(self):
 		"""Testing."""
 		
 		await self.bot.say("`" + choice(self.wish) + "`")
