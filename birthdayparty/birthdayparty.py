@@ -33,7 +33,7 @@ class Birthdayparty:
 		#account = user.mention
 		#bday_setdate = bday_input
 		
-		await self.bot.say(user.name)
+		await self.bot.say(user.mention)
 		
 		
 		#openFile = open("data/birthday/birthdays.txt", "w+")
