@@ -38,7 +38,7 @@ class Birthdayparty:
 		
 		openFile = open("data/birthday/birthdays.txt", "w+")
 		findUser = openFile.find(account)
-		if account is in openFile:
+		if account in openFile:
 			await self.bot.say("User found.")
 		else:
 			await self.bot.say("User not found, creating record now.")
