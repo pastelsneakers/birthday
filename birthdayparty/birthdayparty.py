@@ -8,12 +8,12 @@ class Birthdayparty:
 		self.bot = bot
 	
 	@commands.command()
-	async def mycom(self):
+	async def mycom(self, ctx):
 		"""This does stuff!"""
 
 		#Your code will go here
-		user_name = author.display_name
-		await self.bot.say("I can do stuff!" + user_name)
+		author = ctx.message.author
+		await self.bot.say("I can do stuff!" + author.display_name)
 	
 	@commands.group(name="party", pass_context=True)
 	async def _party(self):
