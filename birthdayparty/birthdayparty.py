@@ -10,11 +10,11 @@ class Birthdayparty:
 		self.bot = bot
 	
 	@commands.command()
-	async def mycom(self):
+	async def mycom(self, user : discord.Member):
 		"""This does stuff!"""
 
 		#Your code will go here
-		await self.bot.say("I can do stuff!")
+		await self.bot.say("I can do stuff!" + user.mention)
 	
 	@commands.group(name="party", pass_context=True)
 	async def _party(self):
@@ -33,7 +33,7 @@ class Birthdayparty:
 		#account = user.mention
 		#bday_setdate = bday_input
 		
-		await self.bot.say("`" + user.mention + "`")
+		await self.bot.say(user.name)
 		
 		
 		#openFile = open("data/birthday/birthdays.txt", "w+")
