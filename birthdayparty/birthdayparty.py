@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import re
 
 class Birthdayparty:
 	"""A custom birthday party widget. Celebrate with the whole server!"""
@@ -37,14 +38,14 @@ class Birthdayparty:
 		bday_setdate = bday_input
 		
 		openFile = open("data/birthday/birthdays.txt", "w+")
-		findUser = openFile.find(account)
+		findUser = re.search(r'account', openFile)
 		if account in openFile:
 			await self.bot.say("User found.")
 		else:
 			await self.bot.say("User not found, creating record now.")
 			openFile = open("data/birthday/birthdays.json", "a+")
 			openFile.write(account)
-			findUser = openFile.find(account)
+			findUser = openFile.findall(account)
 			if account in openFile:
 				await self.bot.say("Operation success, account created.")
 			else:
