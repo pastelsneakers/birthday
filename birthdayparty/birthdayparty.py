@@ -8,7 +8,7 @@ class Birthdayparty:
 		self.bot = bot
 	
 	@commands.command()
-	async def mycom(self):
+	async def mycom(self, user : discord.Member):
 		await self.bot.say("I can do stuff!")
 
 def setup(bot):
