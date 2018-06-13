@@ -2,9 +2,7 @@ import discord
 from discord.ext import commands
 
 class Birthdayparty:
-	"""A custom birthday party widget.
-	Celebrate with the whole server!
-	"""
+	"""A custom birthday party widget. Celebrate with the whole server!"""
 
     def __init__(self, bot):
         self.bot = bot
