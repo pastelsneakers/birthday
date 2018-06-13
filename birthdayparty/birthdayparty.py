@@ -28,14 +28,14 @@ class Birthdayparty:
 		"""
 
 	@_party.command(pass_context=True)
-	async def register(self, user : discord.Member.nick, *, bday_input : str):
+	async def register(self, user : discord.Member):
 		"""Registration, yeah!
 		
 		Command: !party register <birthday>
 		<birthday> input should be in MM/DD format.
 		"""
 		account = user
-		bday_setdate = bday_input
+		#bday_setdate = bday_input
 		
 		await self.bot.say(account)
 		
