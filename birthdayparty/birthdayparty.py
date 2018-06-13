@@ -10,7 +10,7 @@ class Birthdayparty:
 		self.bot = bot
 	
 	@commands.command()
-	async def mycom(self, user : discord.Member):
+	async def mycom(self, user: discord.Member):
 		"""This does stuff!"""
 
 		#Your code will go here
